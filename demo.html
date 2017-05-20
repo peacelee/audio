@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>Audio</title>
+	<link rel="stylesheet" href="./audio.css">
+</head>
+<body>
+	<div style="height:100px"></div>
+	
+	<!-- 音频播放器 start -->
+	<div class="audio">
+		<div class="progress" data-js="progress">
+			<div class="pre_bar" data-js="preBar"></div>
+			<div class="cur_bar" data-js="curBar">
+				<div class="slide_radio" data-js="drag"></div>
+			</div>
+		</div>
+		<div class="time flex">
+			<div class="cur flex_item" data-js="curTime">00:00</div>
+			<div class="end flex_item" data-js="total">00:00</div>
+		</div>
+		<div class="control flex">
+			<div class="flex_item pre_case">
+				<div class="pre" data-js="prev"></div>
+			</div>
+			<div class="flex_middle">
+				<div class="play pause" data-js="play"></div>
+			</div>
+			<div class="flex_item next_case">
+				<div class="next" data-js="next"></div>
+			</div>
+		</div>
+	</div>
+	<audio id="audio" src="1234.m4a"></audio>
+	<!-- 音频播放器 end -->
+</body>
+<script src="./zepto.min.js"></script>
+<script src="./audio.js"></script>
+<script>
+	new Audio({
+		id: "#audio",
+		barPadding: 16, //进度条padding值
+		dragWidth: 40,	//滑动按钮宽度
+		callback: function(e){
+			console.log(e.type)
+		}
+	})
+
+	// function a() {
+
+	// 	return setTimeout(function(){return 1},230)
+	// }
+	// console.log(a())
+</script>
+</html>

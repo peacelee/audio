@@ -1,0 +1,123 @@
+body, div {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+.flex {
+	display: -webkit-box;
+	display: box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: justify;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.flex_item {
+	min-width: 0;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+.flex_middle {
+	min-width: 0;
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	flex: 2;
+}
+.audio {
+	padding: 0 40px;
+	background: #fff;
+}
+.progress {
+	position: relative;
+	height: 6px;
+	background: #dcdcdc;
+}
+.pre_bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 6px;
+	background: yellow;
+}
+.cur_bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 6px;
+	background: #e8554d;
+}
+.slide_radio {
+	position: absolute;
+	right: -10px;
+	top: 50%;
+	margin-top: -10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fcfcfc;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+.radio_cover {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+}
+.time {
+	margin: 10px 0 15px;
+	font-size: 12px;
+	color: #cbcbcb;
+}
+.end {
+	text-align: right;
+}
+.control {
+	text-align: center;
+	height: 40px;
+}
+.play {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: url("./i/play.png") no-repeat center;
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+.pause {
+	background: url("./i/pause.png") no-repeat center;
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+.pre_case {
+	text-align: right;
+}
+.pre {
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("./i/pre.png") no-repeat center;
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+}
+.next_case {
+	text-align: left;
+}
+.next {
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("./i/next.png") no-repeat center;
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+}
