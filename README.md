@@ -15,7 +15,7 @@ DOM结构
        </div>
        <div class="control flex">
            <div class="flex_item pre_case">
-               <div class="pre" data-js="pre"></div>
+               <div class="pre" data-js="prev"></div>
            </div>
            <div class="flex_middle">
                <div class="play pause" data-js="play"></div>

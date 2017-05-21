@@ -6,6 +6,7 @@
  * @params: id 
  * @params: barPadding [16px(默认)]
  * @params: dragWidth [20px(默认)]
+ * @paprams: callback: function(e){} //回调(e.type = "next" | "prev" | "end"),分别代表下一首,上一首,播放结束
  *
 */
 
@@ -126,16 +127,20 @@ var Audio = function(options){
 
     //监听缓冲数据
     function buffer() {
-        //缓冲时间
-        var buffered = audio.buffered;
-        var preDone = buffered.end(buffered.length - 1);
-        //缓冲宽度（%）
-        var preWidth = progressWith(preDone, duration);
-        //展示缓冲条进度
-        showProgress($preBar, preWidth)
-        //如果缓冲结束，则清除定时器
-        if (preDone == duration) {
-            clearInterval(setBuffer)
+        try {
+            //缓冲时间
+            var buffered = audioDom.buffered;
+            var preDone = buffered.end(buffered.length - 1);
+            //缓冲宽度（%）
+            var preWidth = progressWith(preDone, duration);
+            //展示缓冲条进度
+            showProgress($preBar, preWidth);
+            //如果缓冲结束，则清除定时器
+            if (preDone == duration) {
+                clearInterval(setBuffer)
+            }
+        }catch (err){
+
         }
     }
 
